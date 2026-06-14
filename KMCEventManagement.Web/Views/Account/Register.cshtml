@@ -1,0 +1,89 @@
+﻿@model KMCEventManagement.Web.Models.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h3>User Registration</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form asp-action="Register" method="post">
+
+                        <div class="mb-3">
+                            <label>Full Name</label>
+                            <input asp-for="FullName"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <input asp-for="Email"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Password</label>
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Role</label>
+
+                            <select asp-for="Role"
+                                    class="form-control">
+
+                                <option value="Participant">
+                                    Participant
+                                </option>
+
+                                <option value="Organizer">
+                                    Organizer
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            Register
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,85 @@
+﻿@model KMCEventManagement.Web.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5">
+
+    <h1 class="text-primary fw-bold mb-4">
+        KMC Dashboard
+    </h1>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <h5>Total Events</h5>
+                    <h2 class="text-primary">
+                        @Model.TotalEvents
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <h5>Total Users</h5>
+                    <h2 class="text-success">
+                        @Model.TotalUsers
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <h5>Registrations</h5>
+                    <h2 class="text-warning">
+                        @Model.TotalRegistrations
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <h5>Upcoming Events</h5>
+                    <h2 class="text-info">
+                        @Model.UpcomingEvents
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card shadow border-0">
+
+        <div class="card-header bg-primary text-white">
+            Quick Actions
+        </div>
+
+        <div class="card-body">
+
+            <a asp-controller="Event"
+               asp-action="Index"
+               class="btn btn-primary">
+                View Events
+            </a>
+
+            <a asp-controller="MyRegistration"
+               asp-action="Index"
+               class="btn btn-success">
+                My Registrations
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

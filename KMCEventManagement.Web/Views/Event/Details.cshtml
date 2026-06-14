@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Event Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-body">
+
+            <h2>Kandy Music Festival</h2>
+
+            <p>
+                Annual Music Event
+            </p>
+
+            <hr>
+
+            <p>
+                <strong>Category:</strong> Music
+            </p>
+
+            <p>
+                <strong>Location:</strong> Kandy City Hall
+            </p>
+
+            <p>
+                <strong>Date:</strong> 10 Jul 2026
+            </p>
+
+            <a asp-controller="Registration"
+               asp-action="Register"
+               asp-route-id="1"
+               class="btn btn-success">
+                Register Event
+            </a>
+
+        </div>
+    </div>
+</div>

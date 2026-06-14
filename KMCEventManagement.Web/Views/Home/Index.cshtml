@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center">
+        <h1 class="display-4 fw-bold text-primary">
+            KMC Event Management System
+        </h1>
+
+        <p class="lead">
+            Discover and Register for Events in Kandy
+        </p>
+
+        <a asp-controller="Event"
+           asp-action="Index"
+           class="btn btn-primary btn-lg">
+            View Events
+        </a>
+    </div>
+
+    <hr />
+
+    <div class="row mt-5">
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4>Music Events</h4>
+                    <p>Find music festivals and concerts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4>Sports Events</h4>
+                    <p>Join exciting sports competitions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4>Community Events</h4>
+                    <p>Participate in local community programs.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

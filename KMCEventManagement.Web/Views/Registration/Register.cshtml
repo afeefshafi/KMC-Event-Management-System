@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Event Registration";
+}
+
+<div class="container mt-5">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <div class="card shadow">
+
+        <div class="card-header bg-success text-white">
+            <h3>Event Registration</h3>
+        </div>
+
+        <div class="card-body">
+
+            <p class="fs-5">
+                Event ID:
+                <strong>@ViewBag.EventId</strong>
+            </p>
+
+            <hr />
+
+            <form asp-action="RegisterEvent" method="post">
+
+                <input type="hidden"
+                       name="eventId"
+                       value="@ViewBag.EventId" />
+
+                <button type="submit"
+                        class="btn btn-success btn-lg">
+                    Confirm Registration
+                </button>
+
+                <a asp-controller="Event"
+                   asp-action="Index"
+                   class="btn btn-secondary btn-lg ms-2">
+                    Back to Events
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
