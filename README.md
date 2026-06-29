@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-KMC Event Management System is a web-based application developed using ASP.NET Core MVC, ASP.NET Web API, Entity Framework Core, and SQL Server. The system enables users to register, log in, view events, register for events, and manage event-related information efficiently.
+Kandy Municipal Council (KMC) Event Management System is a web-based application developed using ASP.NET Core MVC, ASP.NET Web API, Entity Framework Core, and SQL Server. The system enables users to register, log in, view events, register for events, and manage event-related information efficiently.
 
 ---
 
